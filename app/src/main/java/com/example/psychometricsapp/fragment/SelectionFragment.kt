@@ -56,3 +56,30 @@ class SelectionFragment : Fragment(), View.OnClickListener {
          */
         // TODO: Rename and change types and number of parameters
     }
+
+    override fun onClick(view: View?) {
+        when(view?.id) {
+
+            R.id.btn_back -> {
+                navController.popBackStack()
+            }
+            R.id.option_1 -> {
+                navgateWithIndex(1)
+            }
+            R.id.option_2 -> {
+                navgateWithIndex(2)
+            }
+            R.id.option_3 -> {
+                navgateWithIndex(3)
+            }
+            R.id.option_4 -> {
+                navgateWithIndex(4)
+            }
+        }
+    }
+
+    fun navgateWithIndex(index: Int) {
+        val bundle = bundleOf("index" to index)
+        navController.navigate(R.id.action_selectionFragment_to_resultFragment, bundle)
+    }
+}
