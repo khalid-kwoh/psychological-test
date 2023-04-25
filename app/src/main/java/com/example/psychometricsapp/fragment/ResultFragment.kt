@@ -57,3 +57,28 @@ class ResultFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameter
     }
+
+    fun setResult(option: Int) {
+        when(option) {
+            1 -> {
+                binding.MainTextView.text = "You are a QUITTER!"
+                binding.SubTextView.text = "You can let the person easily!"
+            }
+
+            2 -> {
+                binding.MainTextView.text = "You should focus on yourself!"
+                binding.SubTextView.text = "You become really clingy to your EX!"
+            }
+
+            3 -> {
+                binding.MainTextView.text = "You should take it easy!"
+                binding.SubTextView.text = "You can do crazy things no matter what it takes!"
+            }
+
+            4 -> {
+                binding.MainTextView.text = "You are pretty mature!"
+                binding.SubTextView.text = "You can easily accept the break-up!"
+            }
+        }
+    }
+}
