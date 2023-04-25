@@ -57,4 +57,21 @@
         android:text="4. Make them as dried flower."
         android:background="@drawable/selection"/>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/previous"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+    />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
